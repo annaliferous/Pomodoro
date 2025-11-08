@@ -1,0 +1,141 @@
+.outline {
+  width: 350px;
+  height: 520px;
+  /* to have the elements(time and buttons) under each other */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffabc8;
+  border-top: 2px solid #222222;
+  border-left: 2px solid #222222;
+  border-right: 2px solid #222222;
+  border-bottom: 3px solid #222222;
+  outline-color: #f4acff;
+
+  border-radius: 20px;
+}
+
+.screen {
+  width: 290px;
+  height: 200px;
+  position: absolute;
+  top: 20px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 5px;
+
+  border-top: 2px solid rgb(39, 39, 39);
+  border-left: 2px solid rgb(39, 39, 39);
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  outline-color: black;
+
+  color: black;
+  font-family: digital-clock-font;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.line {
+  width: 100%;
+  border: none; /* remove default border */
+  border-bottom: 4px dotted #000000;
+}
+.message,
+.time_outline {
+  justify-self: center;
+  align-items: center;
+}
+
+#time {
+  font-size: 35px;
+  font-family: digital-clock-font;
+}
+
+.music {
+  font-size: 10px;
+  padding-top: 10px;
+}
+
+.buttons {
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  top: 50%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid 1px #220f24;
+  background-color: whitesmoke;
+  grid-template-columns: auto auto;
+}
+.innerCircle {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  /* Elements true center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffabc8;
+  border: solid 1px #220f24;
+  border-radius: 50%;
+}
+
+.menu {
+  position: absolute;
+  /* Elements true center */
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: button_font;
+}
+
+#back {
+  position: absolute;
+  /* Elements true center */
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+#backward {
+  position: absolute;
+  /* Elements true center */
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+#forward {
+  position: absolute;
+  /* Elements true center */
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.play {
+  position: absolute;
+  /* Elements true center */
+  font-size: 15px;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("Fonts/pixel_3/pixel.ttf");
+}
+
+@font-face {
+  font-family: "button_font";
+  src: url("Fonts/lemon_milk/LEMONMILK-Bold.otf");
+}

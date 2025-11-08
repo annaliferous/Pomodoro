@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Timer</title>
+
+    <link rel=" stylesheet" href="timer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="outline">
+        <div class="screen">
+            <span class="message">Pomodoro Timer</span>
+            <hr class="line">
+            <div class="time_outline"> <span id="time">25:00</span></div>
+        </div>
+
+        <div class="buttons">
+            <div class="innerCircle"></div>
+            <p class="menu"><b>MENU</b></p>
+            <div class="play" onclick="startTimer()">
+                <i class="fa fa-play" aria-hidden="true"></i>
+                <i class="fa fa-pause" aria-hidden="true"></i>
+            </div>
+
+            <i class="fa fa-fast-backward" id="backward" aria-hidden="true"></i>
+            <i class="fa fa-fast-forward" id="forward" aria-hidden="true"></i>
+
+        </div>
+</body>
+
+<script src="timer.js"></script>
+
+</html>
