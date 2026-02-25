@@ -1,4 +1,4 @@
-// Timer
+/* Timer */
 // https://jsfiddle.net/u7ahcdgn/2/
 
 let interval = null;
@@ -26,6 +26,9 @@ function runTimer(work, pause, display) {
   }, 1000);
 }
 
+/* Play Audio */
+
+/* Play Button */
 document.getElementById("play").addEventListener("click", () => {
   var work = 60 * 24 + 59,
     pause = 60 * 15,
