@@ -1,10 +1,14 @@
 // Timer
 // https://jsfiddle.net/u7ahcdgn/2/
-function runTimer(duration, display) {
-  let timer = duration,
-    min,
-    sec;
-  let interval = setInterval(function () {
+
+let interval = null;
+let isRunning = false;
+
+function runTimer(work, pause, display) {
+  let timer = work;
+  let isWork = true;
+
+  interval = setInterval(() => {
     min = parseInt(timer / 60, 10);
     sec = parseInt(timer % 60, 10);
 
@@ -15,19 +19,23 @@ function runTimer(duration, display) {
 
     display.textContent = min + ":" + sec;
 
-    if (--timer < 0) {
-      clearInterval(interval);
-      display.textContent = duration;
+    if (--timer <= 0) {
+      isWork = !isWork;
+      timer = isWork ? work : pause;
     }
   }, 1000);
-
-  document.getElementById("rerun").addEventListener("click", function () {
-    clearInterval(interval);
-  });
 }
 
-function startTimer() {
-  var dur = 60 * 25,
+document.getElementById("play").addEventListener("click", () => {
+  var work = 60 * 24 + 59,
+    pause = 60 * 15,
     display = document.querySelector("#time");
-  runTimer(dur, display);
-}
+  if (isRunning) {
+    clearInterval(interval);
+    display.textContent = "25:00";
+    isRunning = false;
+  } else {
+    runTimer(work, pause, display);
+    isRunning = true;
+  }
+});
